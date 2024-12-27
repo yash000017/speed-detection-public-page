@@ -1,0 +1,115 @@
+/* About section styling */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  background-color: #f7f7f7;
+  gap: 60px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Image styling */
+.about img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 1s ease-out;
+}
+
+/* Text styling */
+.about-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Title styling */
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Description styling */
+.about-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Keyframes for zoom-in animation */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .about {
+    padding: 40px 20px; /* Adjust padding for tablets */
+    gap: 20px; /* Reduce gap between image and text */
+  }
+
+  .about img {
+    width: 250px; /* Slightly smaller image */
+    height: 250px; /* Adjust image height */
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem; /* Adjust font size for the title */
+  }
+
+  .about-text p {
+    font-size: 0.95rem; /* Adjust font size for description */
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column; /* Stack image and text vertically */
+    padding: 30px 15px; /* Adjust padding for mobile */
+    gap: 15px; /* Reduce gap between image and text */
+  }
+
+  .about img {
+    width: 200px; /* Smaller image on mobile */
+    height: 200px; /* Adjust image height */
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem; /* Smaller title font size */
+  }
+
+  .about-text p {
+    font-size: 0.9rem; /* Smaller description font size */
+  }
+}
+
+/* Very small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .about {
+    padding: 20px 10px; /* Further reduce padding on very small screens */
+  }
+
+  .about img {
+    width: 180px; /* Even smaller image on very small screens */
+    height: 180px; /* Adjust image height */
+  }
+
+  .about-text h2 {
+    font-size: 1.4rem; /* Smaller title font size */
+  }
+
+  .about-text p {
+    font-size: 0.85rem; /* Smaller description font size */
+  }
+}

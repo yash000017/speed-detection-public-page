@@ -1,0 +1,158 @@
+/* Container for the feature section */
+.feature {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px 0;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+/* Styling for each feature card */
+.feature-card {
+  width: 260px;
+  padding: 25px;
+  background-color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Animation delay for each card */
+.feature-card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.feature-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.feature-card:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+/* Hover effect for feature cards */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling */
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #4CAF50;
+  display: inline-block; /* Ensure no padding or extra space around emojis */
+  line-height: 1; /* Align emojis properly */
+  box-shadow: none !important;
+}
+
+/* Title styling */
+.feature-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Description styling */
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  transition: opacity 0.3s ease;
+  opacity: 0.8;
+}
+
+/* Fade-in animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .feature {
+    gap: 20px; /* Reduce gap between cards */
+  }
+
+  .feature-card {
+    width: 45%; /* Two cards per row on tablets */
+    padding: 20px; /* Reduce padding for better fit */
+  }
+
+  .feature-icon {
+    font-size: 2.5rem; /* Slightly reduce icon size on tablets */
+  }
+
+  .feature-card h2 {
+    font-size: 1.4rem; /* Adjust title font size */
+  }
+
+  .feature-card p {
+    font-size: 0.95rem; /* Adjust description font size */
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 767px) {
+  .feature {
+    flex-direction: column;
+    min-width: 100%;
+    gap: 20px; /* Reduce gap between cards */
+    padding: 0 80px; /* Adjust padding for mobile */
+  }
+
+  .feature-card {
+    min-width: 100%; /* Stack cards vertically on mobile */
+    margin-bottom: 20px; /* Add space between stacked cards */
+    padding: 20px; /* Adjust padding for smaller screens */
+    /* margin: 10px; */
+  }
+
+  .feature-icon {
+    font-size: 2rem; /* Smaller icon size for mobile */
+  }
+
+  .feature-card h2 {
+    font-size: 1.3rem; /* Smaller title font size for mobile */
+  }
+
+  .feature-card p {
+    font-size: 0.9rem; /* Smaller description font size for mobile */
+  }
+}
+
+/* Very small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .feature {
+    padding: 0 80px; /* Adjust padding for mobile */
+  }
+
+  .feature-card {
+    width: 100%; /* Ensure cards fill the screen */
+    padding: 15px; /* Further reduce padding */
+  }
+
+  .feature-icon {
+    font-size: 1.8rem; /* Even smaller icons for very small screens */
+  }
+
+  .feature-card h2 {
+    font-size: 1.2rem; /* Further reduce title font size */
+  }
+
+  .feature-card p {
+    font-size: 0.85rem; /* Further reduce description font size */
+  }
+}

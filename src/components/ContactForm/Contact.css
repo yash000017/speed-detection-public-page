@@ -1,0 +1,169 @@
+/* Footer Component Styles */
+
+/* Footer container */
+.footer {
+  background-color: #34495e; /* Dark background for the footer */
+  color: white;
+  padding: 20px 30px; /* Reduced padding for overall footer */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Add gap between sections */
+  min-height: 200px; /* Set a minimum height for the footer */
+}
+
+/* Sections in the footer */
+.section {
+  flex: 1 1 220px; /* Flexibility but with a minimum width */
+  margin: 10px;
+  padding: 0 20px;
+  position: relative; /* For positioning the border */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center the content vertically */
+  min-height: 150px; /* Ensure each section has a minimum height */
+  text-align: center; /* Ensure content is aligned */
+}
+
+/* Add vertical line between sections */
+.section:not(:last-child) {
+  border-right: 1px solid #bdc3c7; /* Light gray vertical line */
+  padding-right: 20px; /* Space for the line */
+}
+
+/* Titles */
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 10px; /* Reduced margin to reduce height */
+  color: #ecf0f1;
+  text-align: center;
+}
+
+/* Download image container */
+.download-img-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Download image */
+.download-img {
+  width: 140px; /* Reduced size */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  object-fit: cover; /* Ensure images stay within bounds */
+  cursor: pointer;
+}
+
+.download-img:hover {
+  transform: scale(1.1);
+}
+
+/* Text paragraphs */
+.text {
+  font-size: 0.9rem; /* Adjust text size for smaller screens */
+  color: #bdc3c7;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 10px; /* Reduced margin to control height */
+}
+
+/* Link styles */
+.link {
+  color: #1abc9c;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+.link:hover {
+  color: white;
+}
+
+/* Responsive Design */
+
+/* Tablet and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px; /* Adjust padding */
+  }
+
+  .section {
+    margin-bottom: 15px; /* Reduce bottom margin */
+    padding: 10px;
+    width: 100%; /* Ensure full-width sections */
+    text-align: center;
+    min-height: 120px; /* Reduced height on tablet */
+  }
+
+  .download-img {
+    width: 80px; /* Adjust size for mobile */
+  }
+
+  .text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 10px; /* Adjust padding for mobile */
+  }
+
+  .section {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    min-height: 100px; /* Further reduced height */
+  }
+
+  .download-img {
+    width: 70px; /* Even smaller image size */
+  }
+
+  .text {
+    font-size: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Very small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px 5px; /* Further reduce padding */
+  }
+
+  .section {
+    margin-bottom: 5px; /* Reduce bottom margin */
+    padding: 5px;
+    min-height: 90px; /* Further reduced height for very small screens */
+  }
+
+  .download-img {
+    width: 60px; /* Even smaller image */
+  }
+
+  .text {
+    font-size: 0.7rem; /* Smaller text for very small screens */
+  }
+
+  .link {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+}

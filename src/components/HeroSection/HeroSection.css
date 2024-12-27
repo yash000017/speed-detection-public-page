@@ -1,0 +1,141 @@
+/* Minimalistic hero section styling */
+.hero {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
+              url('../../assets/ball.jpg') no-repeat center center / cover;
+  color: #f8f8f8;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Centered container for content */
+.hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Title styling with smooth fade-in animation */
+.hero-title {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Description with delayed fade-in for subtle effect */
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Background floating effect */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), transparent 70%);
+  opacity: 0.3;
+  animation: float 10s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Keyframes for background floating effect */
+@keyframes float {
+  0% {
+    transform: translate(-10px, -10px);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(-10px, -10px);
+  }
+}
+
+/* Keyframes for content fade-in and upward movement */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 20px; /* Adjust padding on tablets */
+  }
+
+  .hero-title {
+    font-size: 2.4rem; /* Adjust title font size on tablet */
+  }
+
+  .hero-description {
+    font-size: 1rem; /* Adjust description font size on tablet */
+  }
+
+  .hero-container {
+    max-width: 90%; /* Make container width responsive on tablets */
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 15px; /* Reduce padding for mobile screens */
+  }
+
+  .hero-title {
+    font-size: 2rem; /* Smaller title font size on mobile */
+    margin-bottom: 15px; /* Adjust margin for mobile */
+  }
+
+  .hero-description {
+    font-size: 0.95rem; /* Adjust description font size for mobile */
+    line-height: 1.5; /* Adjust line-height for better readability */
+  }
+
+  .hero-container {
+    max-width: 95%; /* Increase container width for small screens */
+  }
+}
+
+/* Very small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 50px 10px; /* Further reduce padding for very small devices */
+  }
+
+  .hero-title {
+    font-size: 1.6rem; /* Further reduce font size for very small screens */
+    margin-bottom: 10px; /* Adjust margin */
+  }
+
+  .hero-description {
+    font-size: 0.9rem; /* Smaller font size for very small screens */
+  }
+
+  .hero-container {
+    max-width: 100%; /* Full-width container for very small screens */
+  }
+}
