@@ -5,30 +5,30 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #f4f7fc;
   color: #333;
   overflow: auto;
 }
 
 body::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari, Opera */
+  display: none; /* Chrome, Safari, Opera */
 }
 
 body {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-} 
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
 
-h1, h2 {
-  font-family: 'Roboto', sans-serif;
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
 }
 
 .App {
   text-align: center;
   overflow-x: hidden;
 }
-
 
 a {
   text-decoration: none;
@@ -39,11 +39,11 @@ a {
   margin: 0 auto;
 }
 
-.hero {
+/* .hero {
   background-color: #4CAF50;
   color: white;
   padding: 50px 0;
-}
+} */
 
 .hero h1 {
   font-size: 3rem;
@@ -75,7 +75,8 @@ a {
   margin: 0 auto;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -84,7 +85,7 @@ input, textarea {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 10px 20px;
   border: none;

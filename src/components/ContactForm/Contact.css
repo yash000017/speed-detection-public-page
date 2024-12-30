@@ -5,7 +5,7 @@
   background-color: #34495e; /* Dark background for the footer */
   color: white;
   padding: 20px 30px; /* Reduced padding for overall footer */
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -26,6 +26,14 @@
   justify-content: center; /* Center the content vertically */
   min-height: 150px; /* Ensure each section has a minimum height */
   text-align: center; /* Ensure content is aligned */
+}
+
+.footer-company-font {
+  font-size: 16px;
+}
+
+.address {
+  max-width: 300px;
 }
 
 /* Add vertical line between sections */
@@ -73,7 +81,7 @@
 
 /* Link styles */
 .link {
-  color: #1abc9c;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
   margin-bottom: 10px;
@@ -82,7 +90,7 @@
 }
 
 .link:hover {
-  color: white;
+  color: #1abc9c;
 }
 
 /* Responsive Design */

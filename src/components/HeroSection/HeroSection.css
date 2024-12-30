@@ -1,8 +1,12 @@
 /* Minimalistic hero section styling */
 .hero {
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
-              url('../../assets/ball.jpg') no-repeat center center / cover;
-  color: #f8f8f8;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../../assets/new-poster.jpg") no-repeat center center / cover;
+  color: #fff;
   text-align: center;
   padding: 100px 20px;
   position: relative;
@@ -32,7 +36,7 @@
 .hero-description {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #ddd;
+  color: #fff;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1.5s ease-out forwards;
@@ -41,13 +45,17 @@
 
 /* Background floating effect */
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 150%;
   height: 150%;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), transparent 70%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.15),
+    transparent 70%
+  );
   opacity: 0.3;
   animation: float 10s infinite ease-in-out;
   pointer-events: none;
